@@ -1,0 +1,401 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3BDFBA0728A8EFA69A8BF197 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F92D32800EF3F35ED8203AC2 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		451550591B553F4600F8FDD1 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 451550581B553F4600F8FDD1 /* AppDelegate.m */; };
+		4515505B1B553F4600F8FDD1 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4515505A1B553F4600F8FDD1 /* main.m */; };
+		4515505E1B553F4600F8FDD1 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4515505D1B553F4600F8FDD1 /* MapViewController.m */; };
+		451550601B553F4600F8FDD1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4515505F1B553F4600F8FDD1 /* Images.xcassets */; };
+		451550631B553F4600F8FDD1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 451550611B553F4600F8FDD1 /* Main.storyboard */; };
+		451550791B553F5A00F8FDD1 /* AllStationsOrderByCode.csv in Resources */ = {isa = PBXBuildFile; fileRef = 451550781B553F5A00F8FDD1 /* AllStationsOrderByCode.csv */; };
+		4515507B1B553FCA00F8FDD1 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4515507A1B553FCA00F8FDD1 /* MapKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		44E68D85CA31F8373057442B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		451550521B553F4600F8FDD1 /* TransilienStations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TransilienStations.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		451550561B553F4600F8FDD1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		451550571B553F4600F8FDD1 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		451550581B553F4600F8FDD1 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4515505A1B553F4600F8FDD1 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4515505C1B553F4600F8FDD1 /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		4515505D1B553F4600F8FDD1 /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		4515505F1B553F4600F8FDD1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		451550621B553F4600F8FDD1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		451550781B553F5A00F8FDD1 /* AllStationsOrderByCode.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = AllStationsOrderByCode.csv; sourceTree = "<group>"; };
+		4515507A1B553FCA00F8FDD1 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		4515507D1B55408C00F8FDD1 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		4515507E1B55439000F8FDD1 /* TransilienStations.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = TransilienStations.entitlements; sourceTree = "<group>"; };
+		E0F61650F63C7DEC0DDDA270 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		F92D32800EF3F35ED8203AC2 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4515504F1B553F4600F8FDD1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4515507B1B553FCA00F8FDD1 /* MapKit.framework in Frameworks */,
+				3BDFBA0728A8EFA69A8BF197 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		451550491B553F4600F8FDD1 = {
+			isa = PBXGroup;
+			children = (
+				451550541B553F4600F8FDD1 /* TransilienStations */,
+				4515507C1B553FD300F8FDD1 /* Frameworks */,
+				451550531B553F4600F8FDD1 /* Products */,
+				9090AD63BD5B1D2BF9093197 /* Pods */,
+			);
+			sourceTree = "<group>";
+		};
+		451550531B553F4600F8FDD1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				451550521B553F4600F8FDD1 /* TransilienStations.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		451550541B553F4600F8FDD1 /* TransilienStations */ = {
+			isa = PBXGroup;
+			children = (
+				4515507E1B55439000F8FDD1 /* TransilienStations.entitlements */,
+				451550781B553F5A00F8FDD1 /* AllStationsOrderByCode.csv */,
+				451550571B553F4600F8FDD1 /* AppDelegate.h */,
+				451550581B553F4600F8FDD1 /* AppDelegate.m */,
+				4515505C1B553F4600F8FDD1 /* MapViewController.h */,
+				4515505D1B553F4600F8FDD1 /* MapViewController.m */,
+				4515505F1B553F4600F8FDD1 /* Images.xcassets */,
+				451550611B553F4600F8FDD1 /* Main.storyboard */,
+				451550551B553F4600F8FDD1 /* Supporting Files */,
+			);
+			path = TransilienStations;
+			sourceTree = "<group>";
+		};
+		451550551B553F4600F8FDD1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4515507D1B55408C00F8FDD1 /* PrefixHeader.pch */,
+				451550561B553F4600F8FDD1 /* Info.plist */,
+				4515505A1B553F4600F8FDD1 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4515507C1B553FD300F8FDD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4515507A1B553FCA00F8FDD1 /* MapKit.framework */,
+				F92D32800EF3F35ED8203AC2 /* Pods.framework */,
+			);
+			name = Frameworks;
+			path = TransilienStations;
+			sourceTree = "<group>";
+		};
+		9090AD63BD5B1D2BF9093197 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E0F61650F63C7DEC0DDDA270 /* Pods.debug.xcconfig */,
+				44E68D85CA31F8373057442B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		451550511B553F4600F8FDD1 /* TransilienStations */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 451550721B553F4600F8FDD1 /* Build configuration list for PBXNativeTarget "TransilienStations" */;
+			buildPhases = (
+				A66120891BF2132A78606CA6 /* Check Pods Manifest.lock */,
+				4515504E1B553F4600F8FDD1 /* Sources */,
+				4515504F1B553F4600F8FDD1 /* Frameworks */,
+				451550501B553F4600F8FDD1 /* Resources */,
+				D997AE884113E0422995017B /* Embed Pods Frameworks */,
+				4943B454CC663B0A55F37CF1 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TransilienStations;
+			productName = TransilienStations;
+			productReference = 451550521B553F4600F8FDD1 /* TransilienStations.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4515504A1B553F4600F8FDD1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = CocoaBob;
+				TargetAttributes = {
+					451550511B553F4600F8FDD1 = {
+						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = L8Q8UK4Z39;
+						SystemCapabilities = {
+							com.apple.Maps.Mac = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 4515504D1B553F4600F8FDD1 /* Build configuration list for PBXProject "TransilienStations" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 451550491B553F4600F8FDD1;
+			productRefGroup = 451550531B553F4600F8FDD1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				451550511B553F4600F8FDD1 /* TransilienStations */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		451550501B553F4600F8FDD1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				451550601B553F4600F8FDD1 /* Images.xcassets in Resources */,
+				451550791B553F5A00F8FDD1 /* AllStationsOrderByCode.csv in Resources */,
+				451550631B553F4600F8FDD1 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4943B454CC663B0A55F37CF1 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A66120891BF2132A78606CA6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D997AE884113E0422995017B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4515504E1B553F4600F8FDD1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4515505E1B553F4600F8FDD1 /* MapViewController.m in Sources */,
+				4515505B1B553F4600F8FDD1 /* main.m in Sources */,
+				451550591B553F4600F8FDD1 /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		451550611B553F4600F8FDD1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				451550621B553F4600F8FDD1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		451550701B553F4600F8FDD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		451550711B553F4600F8FDD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		451550731B553F4600F8FDD1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E0F61650F63C7DEC0DDDA270 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TransilienStations/TransilienStations.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = TransilienStations/PrefixHeader.pch;
+				INFOPLIST_FILE = TransilienStations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		451550741B553F4600F8FDD1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44E68D85CA31F8373057442B /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = TransilienStations/TransilienStations.entitlements;
+				CODE_SIGN_IDENTITY = "Mac Developer";
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Mac Developer";
+				COMBINE_HIDPI_IMAGES = YES;
+				GCC_PREFIX_HEADER = TransilienStations/PrefixHeader.pch;
+				INFOPLIST_FILE = TransilienStations/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4515504D1B553F4600F8FDD1 /* Build configuration list for PBXProject "TransilienStations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451550701B553F4600F8FDD1 /* Debug */,
+				451550711B553F4600F8FDD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		451550721B553F4600F8FDD1 /* Build configuration list for PBXNativeTarget "TransilienStations" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				451550731B553F4600F8FDD1 /* Debug */,
+				451550741B553F4600F8FDD1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4515504A1B553F4600F8FDD1 /* Project object */;
+}
