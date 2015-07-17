@@ -291,7 +291,18 @@
 }
 
 - (IBAction)exportCodes:(id)sender {
-    [self exportData:nil];
+    size_t total_size = 3 * _stations.count;
+    char *codes = calloc(total_size, sizeof(char));
+    for (size_t i = 0; i < _stations.count; ++i) {
+        Station *station = _stations[i];
+        size_t code_size = [station.code length];
+        const char *code_src = [station.code UTF8String];
+        char *code_dest = &codes[3*i];
+        strncpy(code_dest, code_src, code_size);
+    }
+    NSData *data = [NSData dataWithBytes:codes length:total_size];
+    free(codes);
+    [self exportData:data];
 }
 
 - (IBAction)exportNames:(id)sender {
