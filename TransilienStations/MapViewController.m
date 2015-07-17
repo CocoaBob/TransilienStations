@@ -295,10 +295,8 @@
     char *codes = calloc(total_size, sizeof(char));
     for (size_t i = 0; i < _stations.count; ++i) {
         Station *station = _stations[i];
-        size_t code_size = [station.code length];
-        const char *code_src = [station.code UTF8String];
-        char *code_dest = &codes[3*i];
-        strncpy(code_dest, code_src, code_size);
+        const char *code_c = [station.code UTF8String];
+        strncpy(&codes[3*i], code_c, strlen(code_c));
     }
     NSData *data = [NSData dataWithBytes:codes length:total_size];
     free(codes);
@@ -306,7 +304,15 @@
 }
 
 - (IBAction)exportNames:(id)sender {
-    [self exportData:nil];
+    NSMutableData *data = [NSMutableData new];
+    for (size_t i = 0; i < _stations.count; ++i) {
+        Station *station = _stations[i];
+        NSString *name = station.name;
+        const char *name_c = [name UTF8String];
+        size_t name_c_length = strlen(name_c);
+        [data appendBytes:name_c length:name_c_length+1];
+    }
+    [self exportData:data];
 }
 
 - (IBAction)exportLatLng:(id)sender {
