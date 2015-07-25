@@ -279,10 +279,11 @@
 
 #pragma mark - Export
 
-- (void)exportData:(NSData *)data {
+- (void)exportData:(NSData *)data withName:(NSString *)name {
     NSSavePanel *savePanel = [NSSavePanel savePanel];
     savePanel.allowedFileTypes = @[@"bin"];
     savePanel.canCreateDirectories = YES;
+    savePanel.nameFieldStringValue = name;
     [savePanel beginWithCompletionHandler:^(NSInteger result) {
         if (result == NSFileHandlingPanelOKButton) {
             [data writeToURL:[savePanel URL] atomically:YES];
@@ -300,7 +301,22 @@
     }
     NSData *data = [NSData dataWithBytes:codes length:total_size];
     free(codes);
-    [self exportData:data];
+    [self exportData:data withName:@"station_code.bin"];
+}
+
+- (IBAction)exportNamePositions:(id)sender {
+    NSMutableData *data = [NSMutableData new];
+    size_t name_pos = 0;
+    for (size_t i = 0; i < _stations.count; ++i) {
+        uint8_t length_bytes[2];
+        length_bytes[0] = (name_pos >> 8) & 0xFF;
+        length_bytes[1] = name_pos & 0xFF;
+        [data appendBytes:length_bytes length:2];
+        Station *station = _stations[i];
+        const char *name_c = [station.name UTF8String];
+        name_pos += strlen(name_c) + 1;
+    }
+    [self exportData:data withName:@"station_name_pos.bin"];
 }
 
 - (IBAction)exportNames:(id)sender {
@@ -312,11 +328,11 @@
         size_t name_c_length = strlen(name_c);
         [data appendBytes:name_c length:name_c_length+1];
     }
-    [self exportData:data];
+    [self exportData:data withName:@"station_name.bin"];
 }
 
 - (IBAction)exportLatLng:(id)sender {
-    [self exportData:nil];
+    [self exportData:nil withName:@""];
 }
 
 @end
