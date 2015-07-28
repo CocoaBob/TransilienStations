@@ -331,6 +331,21 @@
     [self exportData:data withName:@"station_name.bin"];
 }
 
+- (IBAction)exportNamesForSearching:(id)sender {
+    NSMutableData *data = [NSMutableData new];
+    for (size_t i = 0; i < _stations.count; ++i) {
+        Station *station = _stations[i];
+        NSString *name = station.name;
+        name = [name uppercaseString];
+        name = [name stringByFoldingWithOptions:NSDiacriticInsensitiveSearch locale:nil];
+        name = [[name componentsSeparatedByCharactersInSet:[[NSCharacterSet uppercaseLetterCharacterSet] invertedSet]] componentsJoinedByString:@""];
+        const char *name_c = [name UTF8String];
+        size_t name_c_length = strlen(name_c);
+        [data appendBytes:name_c length:name_c_length+1];
+    }
+    [self exportData:data withName:@"station_name_search.bin"];
+}
+
 - (IBAction)exportLatLng:(id)sender {
     [self exportData:nil withName:@""];
 }
