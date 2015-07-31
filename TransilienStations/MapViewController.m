@@ -308,12 +308,17 @@
     NSMutableData *data = [NSMutableData new];
     size_t name_pos = 0;
     for (size_t i = 0; i < _stations.count; ++i) {
+        // Position
         uint8_t length_bytes[2];
         length_bytes[0] = (name_pos >> 8) & 0xFF;
         length_bytes[1] = name_pos & 0xFF;
         [data appendBytes:length_bytes length:2];
+        
+        // Name string
         Station *station = _stations[i];
         const char *name_c = [station.name UTF8String];
+        
+        // Next position
         name_pos += strlen(name_c) + 1;
     }
     [self exportData:data withName:@"station_name_pos.bin"];
@@ -332,8 +337,17 @@
 }
 
 - (IBAction)exportNamesForSearching:(id)sender {
-    NSMutableData *data = [NSMutableData new];
+    NSMutableData *data_names = [NSMutableData new];
+    NSMutableData *data_positions = [NSMutableData new];
+    size_t name_pos = 0;
     for (size_t i = 0; i < _stations.count; ++i) {
+        // Position
+        uint8_t length_bytes[2];
+        length_bytes[0] = (name_pos >> 8) & 0xFF;
+        length_bytes[1] = name_pos & 0xFF;
+        [data_positions appendBytes:length_bytes length:2];
+        
+        // Name string
         Station *station = _stations[i];
         NSString *name = station.name;
         name = [name uppercaseString];
@@ -341,9 +355,13 @@
         name = [[name componentsSeparatedByCharactersInSet:[[NSCharacterSet uppercaseLetterCharacterSet] invertedSet]] componentsJoinedByString:@""];
         const char *name_c = [name UTF8String];
         size_t name_c_length = strlen(name_c);
-        [data appendBytes:name_c length:name_c_length+1];
+        [data_names appendBytes:name_c length:name_c_length+1];
+        
+        // Next position
+        name_pos += name_c_length + 1;
     }
-    [self exportData:data withName:@"station_name_search.bin"];
+    [self exportData:data_names withName:@"station_name_search.bin"];
+    [self exportData:data_positions withName:@"station_name_search_pos.bin"];
 }
 
 - (IBAction)exportLatLng:(id)sender {
